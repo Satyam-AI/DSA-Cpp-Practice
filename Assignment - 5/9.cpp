@@ -1,0 +1,1 @@
+// 9. Write a program to print cubes of the first N natural numbers

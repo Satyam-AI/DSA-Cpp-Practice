@@ -1,0 +1,1 @@
+// 2. Write a program to print the first N natural numbers.

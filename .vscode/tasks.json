@@ -1,0 +1,24 @@
+﻿{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "compile and run",
+      "type": "shell",
+      "command": "g++ -std=c++17 -o \"%TEMP%\\cpp_run_${fileBasenameNoExtension}.exe\" \"${file}\" && \"%TEMP%\\cpp_run_${fileBasenameNoExtension}.exe\" < \"${workspaceFolder}\\input.txt\" > \"${workspaceFolder}\\output.txt\" && del \"%TEMP%\\cpp_run_${fileBasenameNoExtension}.exe\"",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": {
+          "executable": "C:\\Windows\\System32\\cmd.exe",
+          "args": [
+            "/d",
+            "/c"
+          ]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

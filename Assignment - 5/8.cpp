@@ -1,0 +1,1 @@
+// 8. Write a program to print squares of the first N natural numbers
