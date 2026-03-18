@@ -4,7 +4,7 @@
     {
       "label": "compile and run",
       "type": "shell",
-      "command": "g++ -std=c++17 -o \"%TEMP%\\cpp_run_${fileBasenameNoExtension}.exe\" \"${file}\" && \"%TEMP%\\cpp_run_${fileBasenameNoExtension}.exe\" < \"${workspaceFolder}\\input.txt\" > \"${workspaceFolder}\\output.txt\" && del \"%TEMP%\\cpp_run_${fileBasenameNoExtension}.exe\"",
+      "command": "g++ -std=c++17 -o \"%TEMP%\\cpp_run_${fileBasenameNoExtension}.exe\" \"${file}\" && \"%TEMP%\\cpp_run_${fileBasenameNoExtension}.exe\" < \"${workspaceFolder}\\input.txt\" > \"${workspaceFolder}\\Output.txt\" && del \"%TEMP%\\cpp_run_${fileBasenameNoExtension}.exe\"",
       "options": {
         "cwd": "${workspaceFolder}",
         "shell": {

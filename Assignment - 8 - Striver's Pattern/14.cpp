@@ -1,9 +1,10 @@
 /*
-1
-2 3
-4 5 6
-7 8 9 10
-11 12 13 14
+
+A
+AB
+ABC
+ABCD
+ABCDE
 
 */
 
@@ -12,13 +13,13 @@ using namespace std;
 
 void pattern(int n)
 {
-    int num = 1;
-    for (int i = 1; i <= n; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 1; j <= i; j++)
+        for (char j = 'A'; j <= 'A' + i; j++)
+        // for (char ch = 'A'; ch <= 'A' + i; ch++)
         {
-            cout << num << " ";
-            num++;
+            cout << j << " ";
+            // cout<<ch<<" ";
         }
         cout << endl;
     }
