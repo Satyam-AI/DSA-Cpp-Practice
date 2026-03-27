@@ -1,0 +1,1 @@
+// 7. Write a recursive function to print squares of first N natural numbers
