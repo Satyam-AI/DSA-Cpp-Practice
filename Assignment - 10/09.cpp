@@ -1,5 +1,5 @@
 // 9. Write a function to check whether a given number contains a given digit or not. (TSRS)
-
+/*
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -23,3 +23,6 @@ int main()
     cout << result;
     return 0;
 }
+    */
+
+    // 9. Write a function to check whether a given number contains a given digit or not. (TSRS)

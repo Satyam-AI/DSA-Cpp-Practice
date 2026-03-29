@@ -1,0 +1,1 @@
+// 2. Write a recursive function to calculate sum of first N odd natural numbers
