@@ -33,3 +33,27 @@ int main()
 */
 
 // 8. Write a function to calculate the number of arrangements one can make from n items and r selected at a time. (TSRS)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int factorial(int n)
+{
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+        fact *= i;
+    return fact;
+}
+int printnumberofarrangements(int n, int r)
+{
+    int ans = factorial(n) / (factorial(r) * factorial(n - r));
+    return ans;
+}
+
+int main()
+{
+    int n, r;
+    cin >> n >> r;
+    cout << printnumberofarrangements(n, r);
+    return 0;
+}

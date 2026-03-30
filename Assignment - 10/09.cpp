@@ -25,4 +25,29 @@ int main()
 }
     */
 
-    // 9. Write a function to check whether a given number contains a given digit or not. (TSRS)
+// 9. Write a function to check whether a given number contains a given digit or not. (TSRS)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string checkdigit(int x, int y)
+{
+    while (x > 0)
+    {
+        int lastdigit = x % 10;
+        x /= 10;
+
+    if (lastdigit == y)
+        return "Yes";
+    }
+    return "No";
+}
+
+int main()
+{
+    int x,y;
+    cin>>x>>y;
+    cout<<checkdigit(x,y);
+    return 0;
+
+}
