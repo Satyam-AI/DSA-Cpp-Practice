@@ -11,20 +11,19 @@ int printsum(int sum, int n)
     return printsum(sum + n, n - 1);
 }
 
-
 int printsum2(int n)
 {
-    if (n  1)
+    if (n < 1)
         return 0;
 
     return n + printsum2(n - 1);
 }
 
-
 int main()
 {
-    int n;
-    cin >> n;
-    cout << printsum2(n);
+    int n, m;
+    cin >> n >> m;
+    cout << printsum2(n) << endl;
+    cout << printsum(0, m);
     return 0;
 }
