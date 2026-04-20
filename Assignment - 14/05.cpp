@@ -21,3 +21,22 @@ int main()
     cout << smallest;
     return 0;
 }
+
+int main2()
+{
+    int a[10], smallest;
+
+    for (int i = 0; i < 10; i++)
+        cin >> a[i];
+
+    smallest = a[0];
+
+    for (int i = 1; i < 10; i++)
+    {
+        if (a[i] < smallest)
+            smallest = a[i];
+    }
+
+    cout << smallest;
+    return 0;
+}
