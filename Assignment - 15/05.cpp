@@ -12,6 +12,16 @@ int findDuplicate(int a[], int n)
     return -1;
 }
 
+int findDuplicate2(int a[], int n)
+{
+    for(int i = 0; i < n-1; i++)
+    {
+        if(a[i] == a[i+1])
+            return a[i];
+    }
+    return -1;
+}
+
 int main()
 {
     int n;
@@ -21,6 +31,6 @@ int main()
     for(int i = 0; i < n; i++)
         cin >> a[i];
 
-    cout << findDuplicate(a, n);
+    cout << findDuplicate2(a, n);
     return 0;
 }
