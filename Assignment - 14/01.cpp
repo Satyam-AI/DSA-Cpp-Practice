@@ -5,17 +5,16 @@ using namespace std;
 
 int main()
 {
-    int a[10], sum = 0;
-    double avg;
-
+    int sum = 0;
+    int a[10];
     for (int i = 0; i < 10; i++)
+    {
         cin >> a[i];
-
+    }
     for (int i = 0; i < 10; i++)
-        sum = sum + a[i];
-
-        return 0;
-    avg = sum / 10.0;
-    cout << avg;
+    {
+        sum += a[i];
+    }
+    cout << sum;
     return 0;
 }

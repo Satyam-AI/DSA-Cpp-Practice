@@ -5,24 +5,18 @@ using namespace std;
 
 int main()
 {
-    int arr[10], sum_even = 0, sum_odd = 0;
+    int a[10], sum_even = 0, sum_odd = 0;
     for (int i = 0; i < 10; i++)
-    {
-        cin >> arr[i];
-    }
-    for (int i = 0; i < 10; i++)
-    {
-        if (arr[i] % 2 != 0)
-        {
-            sum_odd += arr[i];
-        }
-        else
-        {
-            sum_even += arr[i];
-        }
-    }
+        cin >> a[i];
 
-    cout << sum_even << endl;
+    for (int i = 0; i < 10; i++)
+    {
+        if (a[i] % 2 == 0)
+            sum_even += a[i];
+        else
+            sum_odd += a[i];
+    }
+    cout << sum_even<<endl;
     cout << sum_odd;
     return 0;
 }
