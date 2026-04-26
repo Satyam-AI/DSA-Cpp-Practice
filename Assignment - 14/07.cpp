@@ -5,24 +5,26 @@ using namespace std;
 
 int main()
 {
-    int a[10];
-
-    for (int i = 0; i < 10; i++)
+    int n;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++)
         cin >> a[i];
-
-    for (int i = 0; i < 9; i++)
+    int largest = a[0], second_largest = a[1];
+    if (second_largest > largest)
+        swap(a[1], a[0]);
+    for (int i = 1; i < n; i++)
     {
-        for (int j = 0; j < 9 - i; j++)
+        if (a[i] > largest)
         {
-            if (a[j] > a[j + 1])
-            {
-                int temp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = temp;
-            }
+            second_largest = largest;
+            largest = a[i];
+        }
+        else if (a[i] > second_largest && a[i] != largest)
+        {
+            second_largest = a[i];
         }
     }
-
-    cout << a[8];
+    cout << second_largest;
     return 0;
 }

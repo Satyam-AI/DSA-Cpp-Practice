@@ -5,48 +5,24 @@ using namespace std;
 
 int main()
 {
-    int a[10];
-
-    for (int i = 0; i < 10; i++)
+    int n;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++)
         cin >> a[i];
-
-    for (int i = 0; i < 9; i++)
-    {
-        for (int j = 0; j < 9 - i; j++)
+    int smallest = a[0], second_smallest = a[1];
+    if (smallest > second_smallest)
+        swap(a[0], a[1]);
+    for (int i = 0; i < n; i++)
+        if (a[i] < smallest)
         {
-            if (a[j] > a[j + 1])
-            {
-                int temp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = temp;
-            }
+            second_smallest = smallest;
+            smallest = a[i];
         }
-    }
-
-    cout << a[1];
-    return 0;
-}
-
-int main2()
-{
-    int a[10];
-
-    for (int i = 0; i < 10; i++)
-        cin >> a[i];
-
-    for (int i = 0; i < 9; i++)
-    {
-        for (int j = 0; j < 9 - i; j++)
+        else if (a[i] > smallest && a[i] < second_smallest)
         {
-            if (a[j] > a[j + 1])
-            {
-                int temp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = temp;
-            }
+            second_smallest = a[i];
         }
-    }
-
-    cout << a[1];
+    cout << second_smallest;
     return 0;
 }
