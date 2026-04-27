@@ -13,10 +13,9 @@ int main()
         cin >> a[i];
         b[i] = a[i];
     }
-
     for (int i = 0; i < n; i++)
     {
-       // b[i] = a[i];
+        // b[i] = a[i];
         cout << b[i] << " ";
     }
     return 0;

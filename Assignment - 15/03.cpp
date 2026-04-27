@@ -3,20 +3,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void sortArray(int a[], int n)
+int* sort_an_array(int a[], int n)
 {
-    for(int i = 0; i < n-1; i++)
+    for(int i =0; i<n-1; i++)
     {
-        for(int j = 0; j < n-1-i; j++)
+        for(int j = 0; j<n-i-1; j++)
         {
-            if(a[j] > a[j+1])
+            if(a[j]>a[j+1])
             {
-                int temp = a[j];
-                a[j] = a[j+1];
-                a[j+1] = temp;
+                swap(a[j], a[j+1]);
             }
         }
     }
+    return a;
 }
 
 int main()
@@ -24,14 +23,8 @@ int main()
     int n;
     cin >> n;
     int a[n];
-
-    for(int i = 0; i < n; i++)
+    for (int i; i < n; i++)
         cin >> a[i];
-
-    sortArray(a, n);
-
-    for(int i = 0; i < n; i++)
-        cout << a[i] << " ";
-
+    cout << sort_an_array(a, n);
     return 0;
 }
