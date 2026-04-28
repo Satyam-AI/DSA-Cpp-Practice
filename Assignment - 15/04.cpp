@@ -7,44 +7,56 @@ then the resulting array after left rotation 2 times is [40, 12, 70, 32, 29] )
 #include <bits/stdc++.h>
 using namespace std;
 
-void rotateLeft(int a[], int n)
+void rotateleft(int a[], int size)
 {
     int temp = a[0];
-    for (int i = 0; i < n - 1; i++)
+
+    for (int i = 0; i < size - 1; i++)
+    {
         a[i] = a[i + 1];
-    a[n - 1] = temp;
+    }
+    a[size - 1] = temp;
 }
 
-void rotateRight(int a[], int n)
+void rotateright(int a[], int size)
 {
-    int temp = a[n - 1];
-    for (int i = n - 1; i > 0; i--)
+    int temp = a[size - 1];
+
+    for (int i = 0; i > 0; i--)
+    {
         a[i] = a[i - 1];
+    }
     a[0] = temp;
+}
+
+
+void rotatearray(int a[], int size, int n, char d)
+{
+    n = n % size;
+    for (int i = 0; i < n; i++)
+    {
+        if (d == 'L')
+            rotateleft(a, size);
+        else if (d == 'R')
+            rotateright(a, size);
+    }
 }
 
 int main()
 {
-    int n, k;
-    char d;
+    int n;
     cin >> n;
-    int a[n];
+    char d;
+    cin >> d;
 
-    for (int i = 0; i < n; i++)
+    int size;
+    cin >> size;
+    int a[size];
+    for (int i = 0; i < size; i++)
         cin >> a[i];
 
-    cin >> k >> d;
-
-    for (int i = 0; i < k; i++)
-    {
-        if (d == 'L')
-            rotateLeft(a, n);
-        else
-            rotateRight(a, n);
-    }
-
-    for (int i = 0; i < n; i++)
+    rotatearray(a, size, n, d);
+    for (int i = 0; i < size; i++)
         cout << a[i] << " ";
-
     return 0;
 }
