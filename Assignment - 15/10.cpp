@@ -1,15 +1,13 @@
-// 7. Write a function in C to count a total number of duplicate elements in an array
+// 10. Write a function in C to count the frequency of each element of an array.
 
 #include <bits/stdc++.h>
 using namespace std;
 
-int count_duplicate(int a[], int n)
+void count_frequency(int a[], int n)
 {
-    int count = 0;
     for (int i = 0; i < n; i++)
     {
         bool already_counted = false;
-
         for (int j = 0; j < i; j++)
         {
             if (a[i] == a[j])
@@ -18,18 +16,19 @@ int count_duplicate(int a[], int n)
                 break;
             }
         }
+
         if (already_counted)
             continue;
-        for (int j = i + 1; j < n; j++)
+
+        int count = 0;
+        for (int j = 0; j < n; j++)
         {
             if (a[i] == a[j])
-            {
                 count++;
-                break;
-            }
         }
+
+        cout << a[i] << " occurs " << count << " times" << endl;
     }
-    return count;
 }
 
 int main()
@@ -39,6 +38,7 @@ int main()
     int a[n];
     for (int i = 0; i < n; i++)
         cin >> a[i];
-    cout << count_duplicate(a, n);
+
+    count_frequency(a, n);
     return 0;
 }
