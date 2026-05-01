@@ -6,10 +6,10 @@ using namespace std;
 int count_duplicate(int a[], int n)
 {
     int count = 0;
+    bool already_counted = false;
     for (int i = 0; i < n; i++)
     {
         bool already_counted = false;
-
         for (int j = 0; j < i; j++)
         {
             if (a[i] == a[j])
@@ -20,6 +20,7 @@ int count_duplicate(int a[], int n)
         }
         if (already_counted)
             continue;
+
         for (int j = i + 1; j < n; j++)
         {
             if (a[i] == a[j])
