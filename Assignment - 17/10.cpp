@@ -10,6 +10,7 @@ int main()
     for (int i = 0; i < s.length(); i++)
     {
         bool already_counted = false;
+
         for (int j = 0; j < i; j++)
         {
             if (s[i] == s[j])
@@ -23,6 +24,7 @@ int main()
             continue;
 
         int count = 0;
+
         for (int j = 0; j < s.length(); j++)
         {
             if (s[i] == s[j])
@@ -31,5 +33,6 @@ int main()
 
         cout << s[i] << " occurs " << count << " times" << endl;
     }
+
     return 0;
 }
