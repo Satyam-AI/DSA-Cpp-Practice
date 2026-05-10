@@ -3,22 +3,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void swapString(string *a, string *b)
+void swapstrings(string *a, string *b)
 {
     string temp = *a;
     *a = *b;
     *b = temp;
 }
-
 int main()
 {
-    string s1, s2;
-
-    cin >> s1 >> s2;
-
-    swapString(&s1, &s2);
-
-    cout << s1 << " " << s2;
-
+    string a, b;
+    cin >> a >> b;
+    swapstrings(&a, &b);
+    cout << a << " " << b;
     return 0;
 }

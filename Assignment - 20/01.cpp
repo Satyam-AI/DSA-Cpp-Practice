@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void swapValues(int *a, int *b)
+void swapvalues(int *a, int *b)
 {
     int temp = *a;
     *a = *b;
@@ -12,12 +12,9 @@ void swapValues(int *a, int *b)
 
 int main()
 {
-    int x, y;
-    cin >> x >> y;
-
-    swapValues(&x, &y);
-
-    cout << x << " " << y;
-
+    int a, b;
+    cin >> a >> b;
+    swapvalues(&a, &b);
+    cout << a << " " << b;
     return 0;
 }
