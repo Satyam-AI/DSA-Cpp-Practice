@@ -3,30 +3,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void sortArray(int *ptr, int size)
+void sortarray(int *ptr, int size)
 {
-    for(int i = 0; i < size-1; i++)
+    for (int i = 0; i < size; i++)
     {
-        for(int j = 0; j < size-1-i; j++)
+        for (int j = 0; j < size - i - 1; j++)
         {
-            if(*(ptr+j) > *(ptr+j+1))
+            if (ptr[j] > ptr[j + 1])
             {
-                int temp = *(ptr+j);
-                *(ptr+j) = *(ptr+j+1);
-                *(ptr+j+1) = temp;
+                swap(ptr[j], ptr[j + 1]);
             }
         }
     }
 }
+
 int main()
 {
-    int n;
-    cin >> n;
-    int a[n];
-    for(int i = 0; i < n; i++)
+    int a[10];
+    for (int i = 0; i < 10; i++)
         cin >> a[i];
-    sortArray(a, n);
-    for(int i = 0; i < n; i++)
-        cout << a[i] << " ";
+    sortarray(a, 10);
+    for (int i = 0; i < 10; i++)
+        cout << a[i]<<" ";
     return 0;
 }
