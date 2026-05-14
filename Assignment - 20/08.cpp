@@ -3,10 +3,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void sumarray(int *ptr, int size)
+void sumarray(int *ptr, int *size)
 {
     int sum = 0;
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < *size; i++)
     {
         sum = sum + *(ptr + i);
     }
@@ -19,6 +19,6 @@ int main()
     int a[n];
     for (int i = 0; i < n; i++)
         cin >> a[i];
-    sumarray(a, n);
+    sumarray(a, &n);
     return 0;
 }

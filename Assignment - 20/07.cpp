@@ -28,4 +28,4 @@ int main()
     cin >> s;
     countnum(&s);
     return 0;
-}
+}z
