@@ -26,8 +26,8 @@ int main()
     {
         if (emp[i].salary > emp[maxIndex].salary)
             maxIndex = i;
-    }
 
+        }
     cout << emp[maxIndex].id << "\n";
     cout << emp[maxIndex].name << "\n";
     cout << emp[maxIndex].salary;
