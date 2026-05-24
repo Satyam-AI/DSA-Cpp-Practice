@@ -27,7 +27,6 @@ int main()
     str = inputString();
 
     cout << str;
-
     free(str);
 
     return 0;
