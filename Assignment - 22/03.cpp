@@ -24,6 +24,5 @@ int main()
     cout << sum;
 
     free(p);
-
     return 0;
 }
