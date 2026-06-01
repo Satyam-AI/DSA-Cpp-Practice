@@ -10,8 +10,6 @@ int main()
     p = (int*) malloc(5 * sizeof(int));
 
     p[0] = 10;
-
     // free(p); missing
-
     return 0;
 }
