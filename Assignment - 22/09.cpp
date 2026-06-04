@@ -15,13 +15,11 @@ int main()
     char *p;
 
     p = (char*) malloc(bytes);
-
     if(p == NULL)
         cout << "Memory Allocation Failed";
     else
         cout << "Memory Allocated Successfully";
 
     free(p);
-
     return 0;
 }
