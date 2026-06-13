@@ -27,7 +27,6 @@ int main()
         if(p[i] < min)
             min = p[i];
     }
-
     cout << "Maximum = " << max << "\n";
 
     cout << "Minimum = " << min;
